@@ -13,3 +13,8 @@ module Cell =
         | Mine -> "*"
         | Number n -> string n
 
+    let click (cell: Cell) =
+        match cell with
+        | Covered c -> c
+        | _ -> cell
+
